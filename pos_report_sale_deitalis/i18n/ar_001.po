@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_report_sale_deitalis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20201115\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-19 10:45+0000\n"
+"PO-Revision-Date: 2020-12-19 10:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Base Amount"
+msgstr "المبلغ الاساسي"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Disc:"
+msgstr ""
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Name"
+msgstr "الاسم"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Price Unit"
+msgstr "وحدة السعر"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Product"
+msgstr "المنتج"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Sales Details"
+msgstr "تفاصيل البيع"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Tax Amount"
+msgstr "قيمة الضريبة"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Taxes"
+msgstr "الضرائب"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Total"
+msgstr "الاجمالي"
+
+#. module: pos_report_sale_deitalis
+#: model_terms:ir.ui.view,arch_db:pos_report_sale_deitalis.pos_saledetiles_inhet
+msgid "Total:"
+msgstr "الاجمالي الكلي"

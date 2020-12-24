@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Roboto;
+    src: url(/pos_report_sale_deitalis/static/src/font/DroidKufi-Regular.ttf);
+    
+}
+
+* {
+    font-family: Roboto ;
+    text-align: center;
+}
+
+th {
+    font-family: Roboto;
+    text-align: center;
+}

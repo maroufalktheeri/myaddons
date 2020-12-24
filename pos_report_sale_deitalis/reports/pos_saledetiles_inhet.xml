@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+              
+    <template id="pos_saledetiles_inhet" inherit_id="point_of_sale.report_saledetails">
+
+      <xpath expr="//div[@class='page']" position="replace">
+
+        <link rel="stylesheet" href="/pos_report_sale_deitalis/static/src/css/style.css"/>
+
+        <div class="text-center">
+                <h2 style="font-family: Roboto;">Sales Details</h2>
+
+                <strong style="font-family: Roboto;"><t t-esc="date_start" t-options="{'widget': 'datetime'}"/> - <t t-esc="date_stop" t-options="{'widget': 'datetime'}"/></strong>
+            </div>
+
+            <!-- Orderlines -->
+            <h3 style="font-family: Roboto;">Products</h3>
+            <table  class="table table-sm">
+                <thead><tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price Unit</th>
+                    <th style="border-bottom: 1px solid black;font-family: Roboto;" >Total</th>
+                </tr></thead>
+                <tbody>
+                <tr t-foreach='products' t-as='line'>
+                    <t t-set="internal_reference" t-value="line['code'] and '[%s] ' % line['code'] or ''" />
+                    <td style="font-family: Roboto;"><t t-esc="internal_reference" /><t t-esc="line['product_name']" /></td>
+                    <td style="font-family: Roboto;">
+                        <t t-esc="line['quantity']" />
+                        <t t-if='line["uom"] != "Units"'>
+                            <t t-esc='line["uom"]' /> 
+                        </t>
+                    </td>
+                    <td style="font-family: Roboto;">
+                        <t t-esc='line["price_unit"]' />
+                    <t t-if='line["discount"] != 0'>
+                        Disc: <t t-esc='line["discount"]' />%
+                    </t>
+                    </td>
+
+                    <td style="font-family: Roboto;">
+                            <t t-set="current_subtotal" t-value="line['quantity'] * line['price_unit']"/>
+                            <t t-esc='current_subtotal'/>
+                      </td>
+                
+
+                </tr>
+
+                <tr>
+                <td style="font-family: Roboto;"><strong>Total</strong></td>
+                <td style="font-family: Roboto;"></td>
+                <td style="font-family: Roboto;"></td>
+               <td style="font-family: Roboto;">
+                <t t-esc='total_paid' 
+                t-options="{'widget': 'float', 'precision': currency_precision}"/> 
+                </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <br/>
+
+            <h3 style="font-family: Roboto;">Payments</h3>
+            <table  class="table table-sm">
+                <thead><tr>
+                    <th style="font-family: Roboto;">Name</th>
+                    <th style="font-family: Roboto;">Total</th>
+                </tr></thead>
+                <tbody>
+                <tr t-foreach='payments' t-as='payment'>
+                    <td style="font-family: Roboto;"><t t-esc="payment['name']" /></td>
+                    <td style="font-family: Roboto;"><t t-esc="payment['total']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <br/>
+
+            <h3 style="font-family: Roboto;">Taxes</h3>
+            <table  class="table table-sm">
+                <thead><tr>
+                    <th style="font-family: Roboto;">Name</th>
+                    <th style="font-family: Roboto;">Tax Amount</th>
+                    <th style="font-family: Roboto;">Base Amount</th>
+                </tr></thead>
+                <tbody>
+                <tr t-foreach='taxes' t-as='tax'>
+                    <td style="font-family: Roboto;"><t t-esc="tax['name']" /></td>
+                    <td style="font-family: Roboto;"><t t-esc="tax['tax_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
+                    <td style="font-family: Roboto;"><t t-esc="tax['base_amount']" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <br/>
+            <br/>
+
+            <strong style="font-family: Roboto;">Total: <t t-esc='total_paid' t-options="{'widget': 'float', 'precision': currency_precision}"/></strong>
+
+      </xpath>
+
+    </template>
+    
+</odoo>
